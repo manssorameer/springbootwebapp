@@ -23,8 +23,8 @@ steps:
     
 - task: CopyFiles@2
   inputs:
-    contents: '**/*.war'
-    targetFolder: '$(build.artifactStagingDirectory)'
+    sourceFolder: $(Build.SourcesDirectory)
+    targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
 
